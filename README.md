@@ -62,8 +62,8 @@ $ cd module && make && sudo make install
 
 # For the utility
 $ cd utility && qmake && make
-$ sudo install -Dm755 clevo-xsm-wmi /usr/bin/clevo-xsm-wmi
-$ sudo install -Dm755 systemd/clevo-xsm-wmi.service /usr/lib/systemd/system/clevo-xsm-wmi.service
+$ sudo install -m755 clevo-xsm-wmi /usr/bin/clevo-xsm-wmi
+$ sudo install -m755 systemd/clevo-xsm-wmi.service /usr/lib/systemd/system/clevo-xsm-wmi.service
 ```
 
 ### Usage
@@ -80,8 +80,8 @@ $ modinfo clevo-xsm-wmi
 $ sudo tee /etc/modprobe.d/clevo-xsm-wmi.conf <<< options clevo-xsm-wmi kb_color=white,white,white kb_brightness=1
 
 # With systemd:
-$ sudo systemctl enable clevo-xsm-service
-$ sudo systemctl start clevo-xsm-service
+$ sudo systemctl enable clevo-xsm.service
+$ sudo systemctl start clevo-xsm.service
 
 # With others:
 run '/usr/bin/clevo-xsm-wmi -r' at boot to restore state
