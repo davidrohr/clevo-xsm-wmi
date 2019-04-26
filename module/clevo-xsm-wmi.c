@@ -41,6 +41,8 @@
 #include <linux/version.h>
 #include <linux/workqueue.h>
 
+#define EXPERIMENTAL
+
 #define __CLEVO_XSM_PR(lvl, fmt, ...) do { pr_##lvl(fmt, ##__VA_ARGS__); } \
 		while (0)
 #define CLEVO_XSM_INFO(fmt, ...) __CLEVO_XSM_PR(info, fmt, ##__VA_ARGS__)
